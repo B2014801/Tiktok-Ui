@@ -1,7 +1,6 @@
 import { Fragment } from "react";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
-import Home from '~/pages/Home'
-import Following from '~/pages/Following'
+
 import { publicRoutes } from "~/routes";
 import { DefaultLayout } from "./components/layout";
 
@@ -21,7 +20,7 @@ function App() {
                             }
                             const Pages=route.component // phai viet hoa chu cai dau tien
 
-                            return (<Route path={route.path} element={
+                            return (<Route key={index} path={route.path} element={
                                 <Layout>
                                     <Pages></Pages>
                                 </Layout>
